@@ -1,6 +1,6 @@
 import ReservationForm from "@/components/features/reservation-form";
 
-export default function Home() {
+export default function Reservation() {
   return (
     <>
       <ReservationForm />

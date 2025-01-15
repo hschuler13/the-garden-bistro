@@ -7,6 +7,7 @@ import {
   SidebarTrigger,
 } from "@/components/ui/sidebar";
 import "./globals.css";
+import FooterSection from '@/components/ui/footer-section';
 export const experimental_ppr = true;
 
 const geistSans = Geist({
@@ -55,6 +56,7 @@ children}: { children: React.ReactNode}) {
         </div>
         {children}
       </SidebarProvider>  
+      <FooterSection></FooterSection>
       </body>
     </html>
     
