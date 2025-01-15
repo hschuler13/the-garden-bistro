@@ -1,9 +1,20 @@
-import ContactForm from "@/components/features/contact-form";
+import { AppSidebar } from "@/components/app-sidebar"
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from "@/components/ui/breadcrumb"
+import Image from 'next/image'
 
-export default function Home() {
+export default function Page() {
   return (
-    <div className="flex flex-col p-24 justify-center items-center h-screen">
-      <ContactForm />
-    </div>
-  );
+    <>
+      <BreadcrumbPage>Data Fetching</BreadcrumbPage>
+      <img src="/theGardenBistroLogo.svg" ></img>
+    </>
+      
+  )
 }
