@@ -9,7 +9,7 @@ import LaunchUI from "@/components/logos/launch-ui";
 
 export default function FooterSection() {
   return (
-    <footer className="w-full bg-background px-4">
+    <footer className="w-full px-4">
       <div className="mx-auto max-w-container">
         <Footer>
           <FooterContent>

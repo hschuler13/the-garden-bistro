@@ -54,9 +54,12 @@ children}: { children: React.ReactNode}) {
           <SidebarTrigger className="-ml-1" />
         </div>
         </div>
+        <div>
         {children}
+        <FooterSection></FooterSection>
+        </div>
+        
       </SidebarProvider>  
-      <FooterSection></FooterSection>
       </body>
     </html>
     
