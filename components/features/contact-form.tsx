@@ -47,8 +47,8 @@ export default function ContactForm() {
   return (
     <Card className="mx-auto max-w-md">
       <CardHeader>
-        <CardTitle>Contact Us</CardTitle>
-        <CardDescription>
+        <CardTitle className="text-md pt-1 font-semibold text-alt">Contact Us</CardTitle>
+        <CardDescription className="pt-1 text-footerBG">
           Fill out the form below and we'll get back to you as soon as possible.
         </CardDescription>
       </CardHeader>
@@ -56,28 +56,28 @@ export default function ContactForm() {
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
             <div className="grid grid-cols-2 gap-4">
-              <div className="space-y-2">
+              <div className="space-y-2 pt-1 text-footerBG">
                 <FormField
                   control={form.control}
                   name="firstName"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>First Name</FormLabel>
+                      <FormLabel className="text-alt">First Name</FormLabel>
                       <FormControl>
-                        <Input placeholder="Your first name" {...field} />
+                        <Input placeholder="Your first name" className=""{...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
                   )}
                 />
               </div>
-              <div className="space-y-2">
+              <div className="space-y-2 pt-1 text-footerBG">
                 <FormField
                   control={form.control}
                   name="lastName"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Last Name</FormLabel>
+                      <FormLabel className="text-alt">Last Name</FormLabel>
                       <FormControl>
                         <Input placeholder="Your last name" {...field} />
                       </FormControl>
@@ -87,13 +87,13 @@ export default function ContactForm() {
                 />
               </div>
             </div>
-            <div className="space-y-2">
+            <div className="space-y-2 pt-1 text-footerBG">
               <FormField
                 control={form.control}
                 name="email"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Email</FormLabel>
+                    <FormLabel className=" text-alt">Email</FormLabel>
                     <FormControl>
                       <Input placeholder="Your Email" {...field} />
                     </FormControl>
@@ -102,18 +102,18 @@ export default function ContactForm() {
                 )}
               />
             </div>
-            <div className="space-y-2">
+            <div className="space-y-2 pt-1 text-footerBG">
               <FormField
                 control={form.control}
                 name="message"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Message</FormLabel>
+                    <FormLabel className=" text-alt">Message</FormLabel>
                     <FormControl>
                       <Textarea
                         id="message"
                         placeholder="Type in your message here"
-                        className="min-h-[120px]"
+                        className="min-h-[120px] border-footerBG"
                         {...field}
                       />
                     </FormControl>

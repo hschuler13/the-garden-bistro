@@ -43,13 +43,13 @@ export default function ReservationForm() {
   return (
     <Card className="w-full max-w-md mx-auto">
       <CardHeader>
-        <CardTitle>Make a Reservation</CardTitle>
-        <CardDescription>Book a table at our restaurant. We'll confirm your reservation via email.</CardDescription>
+        <CardTitle className="text-md pt-1 font-semibold text-alt">Make a Reservation</CardTitle>
+        <CardDescription className="pt-1 text-footerBG">Book a table at our restaurant. We'll confirm your reservation via email.</CardDescription>
       </CardHeader>
-      <form action={onSubmit}>
+      <form action={onSubmit} method="post">
         <CardContent className="space-y-4">
-          <div className="space-y-2">
-            <Label htmlFor="name">Name</Label>
+          <div className="space-y-2 pt-1 text-footerBG">
+            <Label className="text-alt" htmlFor="name">Name</Label>
             <Input 
               id="name"
               name="name"
@@ -57,8 +57,8 @@ export default function ReservationForm() {
               required
             />
           </div>
-          <div className="space-y-2">
-            <Label htmlFor="email">Email</Label>
+          <div className="space-y-2 pt-1 text-footerBG">
+            <Label className="text-alt" htmlFor="email">Email</Label>
             <Input 
               id="email"
               name="email"
@@ -67,8 +67,8 @@ export default function ReservationForm() {
               required
             />
           </div>
-          <div className="space-y-2">
-            <Label htmlFor="guests">Number of Guests</Label>
+          <div className="space-y-2 pt-1 text-footerBG">
+            <Label className="text-alt" htmlFor="guests">Number of Guests</Label>
             <Input 
               id="guests"
               name="guests"
@@ -79,8 +79,8 @@ export default function ReservationForm() {
               required
             />
           </div>
-          <div className="space-y-2">
-            <Label>Date</Label>
+          <div className="space-y-2 pt-1 text-footerBG">
+            <Label className="text-alt">Date</Label>
             <Popover>
               <PopoverTrigger asChild>
                 <Button
@@ -107,8 +107,8 @@ export default function ReservationForm() {
               value={date ? date.toISOString() : ''} 
             />
           </div>
-          <div className="space-y-2">
-            <Label htmlFor="time">Time</Label>
+          <div className="space-y-2 pt-1 text-footerBG">
+            <Label className="text-alt" htmlFor="time">Time</Label>
             <select 
               id="time" 
               name="time" 
@@ -127,8 +127,8 @@ export default function ReservationForm() {
               <option value="21:00">9:00 PM</option>
             </select>
           </div>
-          <div className="space-y-2">
-            <Label htmlFor="notes">Special Requests</Label>
+          <div className="space-y-2 pt-1 text-footerBG">
+            <Label className="text-alt" htmlFor="notes">Special Requests</Label>
             <Textarea
               id="notes"
               name="notes"

@@ -49,8 +49,8 @@ children}: { children: React.ReactNode}) {
       <body className="h-screen bg-[#003B36]">
       <SidebarProvider>
         <AppSidebar />
-        <div className="flex shrink-0 gap-2 bg-[#AAD922] min-h-screen px-4">
-        <div className="flex h-16 shrink-0 items-start gap-2 bg-[#AAD922] px-2 pt-4">
+        <div className="flex shrink-0 gap-2 bg-[#AAD922] min-h-screen px-4 ">
+        <div className="flex h-16 shrink-0 items-start gap-2 bg-[#AAD922] px-2 pt-4 ">
           <SidebarTrigger className="-ml-1" />
         </div>
         </div>
@@ -58,10 +58,8 @@ children}: { children: React.ReactNode}) {
         {children}
         <FooterSection></FooterSection>
         </div>
-        
       </SidebarProvider>  
       </body>
     </html>
-    
   );
 }
