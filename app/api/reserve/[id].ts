@@ -1,4 +1,4 @@
-import { NextApiRequest, NextApiResponse } from "next";
+/*import { NextApiRequest, NextApiResponse } from "next";
 import dbConnect from "../../../lib/dbConnect";
 import Reserve from "../../../models/reserve";
 
@@ -14,7 +14,7 @@ export default async function handler(
   await dbConnect();
 
   switch (method) {
-    case "GET" /* Get a model by its ID */:
+    case "GET" /* Get a model by its ID :
       try {
         const reserve = await Reserve.findById(id);
         if (!reserve) {
@@ -26,7 +26,7 @@ export default async function handler(
       }
       break;
 
-    case "PUT" /* Edit a model by its ID */:
+    case "PUT" /* Edit a model by its ID :
       try {
         const reserve = await Reserve.findByIdAndUpdate(id, req.body, {
           new: true,
@@ -41,7 +41,7 @@ export default async function handler(
       }
       break;
 
-    case "DELETE" /* Delete a model by its ID */:
+    case "DELETE" /* Delete a model by its ID :
       try {
         const deletedReserve = await Reserve.deleteOne({ _id: id });
         if (!deletedReserve) {
@@ -57,4 +57,4 @@ export default async function handler(
       res.status(400).json({ success: false });
       break;
   }
-}
+}*/
