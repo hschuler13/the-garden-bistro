@@ -24,7 +24,7 @@ import {
 } from "@/components/ui/form";
 
 import { z } from "zod";
-//import { send } from "@/lib/email";
+import { send } from "@/lib/email";
 
 export default function ContactForm() {
   const form = useForm<z.infer<typeof formSchema>>({
@@ -41,7 +41,7 @@ export default function ContactForm() {
   function onSubmit(values: z.infer<typeof formSchema>) {
     // Do something with the form values.
     // ✅ This will be type-safe and validated.
-    //send(values);
+    send(values);
   }
 
   return (
