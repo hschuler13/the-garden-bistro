@@ -7,7 +7,7 @@ export async function submitContact(formData: FormData) {
   const guests = formData.get('guests')
   const date = formData.get('date')
   const time = formData.get('time')
-  const notes = formData.get('notes')
+  //const notes = formData.get('notes')
 
   if (!name || !email || !guests || !date || !time) {
     throw new Error('Please fill in all required fields')

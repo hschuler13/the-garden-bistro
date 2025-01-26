@@ -4,7 +4,7 @@ export default function Page() {
       <img src="/theGardenBistroLogo.svg"></img>
       <div>
         Welcome to The Garden Bistro, where each plate is a canvas painted with
-        locally sourced ingredients. We're more than just a restaurant – we're
+        locally sourced ingredients. We&#39;re more than just a restaurant – we&#39;re
         storytellers through food, transforming fresh harvests from neighboring
         farms into culinary masterpieces. Our passion lies in creating
         experiences that connect you to our land and community. Join us in our
@@ -15,15 +15,15 @@ export default function Page() {
       <div>
         {" "}
         By Felipe Fronchetti Senior Food Critic, The Metropolitan Gazette
-        Published: January 18, 2025 In an era where 'farm-to-table' has become a
+        Published: January 18, 2025 In an era where &#39;farm-to-table&#39; has become a
         buzzword, The Garden Bistro transforms this concept into an art form.
         Nestled in the heart of the city, this gem delivers more than just a
         meal – it orchestrates a narrative of sustainability and culinary
-        excellence. Chef Asari's winter tasting menu is a masterclass in
-        seasonal cooking. What sets The Garden Bistro apart isn't just its
-        impeccable sourcing – it's the kitchen's ability to let these premium
+        excellence. Chef Asari&#39;s winter tasting menu is a masterclass in
+        seasonal cooking. What sets The Garden Bistro apart isn&#39;t just its
+        impeccable sourcing – it&#39;s the kitchen&#39;s ability to let these premium
         ingredients sing without overwhelming them. Each dish demonstrates
-        restraint and respect for its components, a rare quality in today's
+        restraint and respect for its components, a rare quality in today&#39;s
         dining landscape. Price: $$ Must-try: Roasted Beet Salad with Goat
         Cheese and Balsamic Glaze, Pan-Seared Salmon with Quinoa and Citrus
         Vinaigrette, and Flourless Chocolate Torte Noise Level: Moderate

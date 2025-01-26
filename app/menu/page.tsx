@@ -107,7 +107,7 @@ export default function Menu() {
     </div>
     <div>
         <p>
-            Rotating selection of craft beers from local breweries, celebrating the best of Willowbrook's artisanal brewing scene.
+            Rotating selection of craft beers from local breweries, celebrating the best of Willowbrook&#39;s artisanal brewing scene.
         </p>
         <Image height={50} width={50} src="/breweries_beer.jpg" alt="tyler my beloved"/>
     </div>

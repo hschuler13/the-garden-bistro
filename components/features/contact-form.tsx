@@ -49,7 +49,7 @@ export default function ContactForm() {
       <CardHeader>
         <CardTitle className="text-md pt-1 font-semibold text-alt">Contact Us</CardTitle>
         <CardDescription className="pt-1 text-footerBG">
-          Fill out the form below and we'll get back to you as soon as possible.
+          Fill out the form below and we&#39;ll get back to you as soon as possible.
         </CardDescription>
       </CardHeader>
       <CardContent>
