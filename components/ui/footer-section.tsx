@@ -6,7 +6,7 @@ import {
   FooterContent,
 } from "@/components/ui/footer";
 
-import LaunchUI from "@/components/logos/launch-ui";
+//import LaunchUI from "@/components/logos/launch-ui";
 
 export default function FooterSection() {
   return (

@@ -29,13 +29,13 @@ export default function ReservationForm() {
       // Reset the form
       const form = document.querySelector('form') as HTMLFormElement
       form.reset()
-    } catch (error) {
+    } /*catch (error) {
       toast({
         title: "Error",
         description: "Something went wrong. Please try again.",
         variant: "destructive",
       })
-    } finally {
+    }*/ finally {
       setIsPending(false)
     }
   }
@@ -44,7 +44,7 @@ export default function ReservationForm() {
     <Card className="w-full max-w-md mx-auto">
       <CardHeader>
         <CardTitle className="text-md pt-1 font-semibold text-alt">Make a Reservation</CardTitle>
-        <CardDescription className="pt-1 text-footerBG">Book a table at our restaurant. We'll confirm your reservation via email.</CardDescription>
+        <CardDescription className="pt-1 text-footerBG">Book a table at our restaurant. We&#39;ll confirm your reservation via email.</CardDescription>
       </CardHeader>
       <form action={onSubmit} method="post">
         <CardContent className="space-y-4">
