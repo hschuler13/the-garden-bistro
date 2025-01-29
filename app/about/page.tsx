@@ -3,8 +3,8 @@ import Image from 'next/image'
 export default function About() {
     return (
 <>
-<Image src="Cafe GB2.jpg" height={50} alt="cafe"/>
-<Image src="Outside GB.jpg" height={49} width={15} alt="cafe"/>
+{/* <Image src="Cafe GB2.jpg" height={50} width={16} alt="cafe"/>
+<Image src="Outside GB.jpg" height={49} width={15} alt="cafe"/> */}
 
 <h3> Our Story</h3>
 <p>Welcome to Garden Bistro, where our motto is Bistro, Bliss and Bloom. At the Garden Bistro every meal is tells the story of creativity, care and community. The Garden Bistro has been nested in downtown Willow brook for over 35 years where we have gratefully been more than a restaurant and  instead having been a place serving delicious and valuable connections with our Willow Brook community.</p>
