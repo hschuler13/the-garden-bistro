@@ -69,7 +69,7 @@ export async function submitContact(formData: FormData) {
   }
 }
 
-export async function sendConfirmationEmail(email: string, name: string, reservationDetails: object) {
+export async function sendConfirmationEmail(email: string, name: string, date: Date | undefined, time: string, guests: string) {
 
   const transporter = nodemailer.createTransport({
     service: 'gmail',
@@ -83,7 +83,7 @@ export async function sendConfirmationEmail(email: string, name: string, reserva
     from: process.env.GMAIL_USER,
     to: email,
     subject: 'Reservation Confirmation',
-    text: `Hello ${name},\n\nYour reservation has been confirmed.\n\nDetails: ${JSON.stringify(reservationDetails, null, 2)}\n\nThank you!`,
+    text: `Hello ${name},\n\nYour reservation has been confirmed.\n\nDetails: Date: ${date}\nTime: ${time}\nNumber of Guests: ${guests} \n\nThank you!`,
   };
 
   try {
@@ -94,3 +94,30 @@ export async function sendConfirmationEmail(email: string, name: string, reserva
     return { success: false, error: (error instanceof Error ? error.message : "Something went wrong. Please try again.") };
   }
 }
+
+export async function sendContactEmail(email: string, fName: string, lName: string, message: string) {
+
+  const transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      user: process.env.GMAIL_USER, // Set in your environment variables
+      pass: process.env.GMAIL_PASS, // Use an App Password instead of your real password
+    },
+  });
+
+  const mailOptions = {
+    from: process.env.GMAIL_USER,
+    to: process.env.GMAIL_USER,
+    subject: `${fName} ${lName} - Feedback`,
+    text: `The client has stated the following message: ${message}\n\nClient email: ${email}`,
+  };
+
+  try {
+    await transporter.sendMail(mailOptions);
+    return { success: true };
+  } catch (error) {
+    console.error("Email send error:", error);
+    return { success: false, error: (error instanceof Error ? error.message : "Something went wrong. Please try again.") };
+  }
+}
+

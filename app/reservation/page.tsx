@@ -4,7 +4,7 @@ import { testDatabaseConnection } from "@/components/features/actions";
 export default async function Reservation() {
   const isConnected = await testDatabaseConnection();
   
-  const reserveForm = {
+/*   const reserveForm = {
     name: "",
     email: "",
     species: "",
@@ -12,7 +12,7 @@ export default async function Reservation() {
     date: "",
     time: "",
     special_requests: "",
-  }; 
+  };  */
 
   return (
     <>

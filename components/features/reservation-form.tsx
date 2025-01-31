@@ -6,17 +6,13 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter }
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
-import { useToast } from "@/components/ui/use-toast"
 import { submitContact, sendConfirmationEmail} from './actions'
 import { Calendar } from "@/components/ui/calendar"
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"
 import { format } from "date-fns"
 import { CalendarIcon } from 'lucide-react'
-import { useRouter } from "next/navigation";
 
 const ReservationForm = () => {
-  const router = useRouter();
-  const { toast } = useToast();
   const [isPending, setIsPending] = useState(false);
   const [date, setDate] = useState<Date | undefined>();
 
@@ -26,32 +22,18 @@ const ReservationForm = () => {
   
     const formData = new FormData(event.currentTarget);
   
-    try {
-      const response = await submitContact(formData);
-      //fix this later
-      //after 12:48 i guess ??
-      //const emailResponse = await sendConfirmationEmail(email, name, { date, time, guests });
+    // Extract values from formData
+    const name = formData.get("name") as string;
+    const email = formData.get("email") as string;
+    const guests = formData.get("guests") as string;
+    const time = formData.get("time") as string;
+    const dateString = formData.get("date") as string;
+    const date = dateString ? new Date(dateString) : undefined; // Convert string back to Date
   
-      if (response.success) {
-        toast({
-          title: "Reservation Successful",
-          description: "Your reservation has been confirmed!",
-        });
-        router.refresh(); // Refresh the page or navigate if needed
-      }
-    } catch (error) {
-      const errorMessage = error instanceof Error ? error.message : "Something went wrong. Please try again.";
-      toast({
-        title: "Reservation Failed",
-        description: errorMessage,
-        variant: "destructive",
-      });
-    } finally {
-      setIsPending(false); // This was missing as well!
-    }
+    const response = await submitContact(formData);
+    const emailResponse = await sendConfirmationEmail(email, name, date, time, guests );
   };
   
-
   return (
     <Card className="w-full max-w-md mx-auto">
       <CardHeader>

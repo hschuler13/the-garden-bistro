@@ -1,7 +1,6 @@
 "use client";
 
 import { formSchema } from "@/lib/schemas";
-
 import {
   Card,
   CardHeader,
@@ -22,11 +21,28 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
+import { sendContactEmail } from "@/components/features/actions";
 
 import { z } from "zod";
-import { send } from "@/lib/email";
+import { useState } from "react";
 
 export default function ContactForm() {
+  const [isPending, setIsPending] = useState(false);
+
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setIsPending(true);
+
+    const formData = new FormData(event.currentTarget);
+
+    // Extract values from formData
+    const fName = formData.get("firstName") as string;
+    const lName = formData.get("lastName") as string;
+    const email = formData.get("email") as string;
+    const message = formData.get("message") as string;
+
+    const emailResponse = await sendContactEmail(email, fName, lName, message);
+  };
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -37,24 +53,20 @@ export default function ContactForm() {
     },
   });
 
-  // 2. Define a submit handler.
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    // Do something with the form values.
-    // ✅ This will be type-safe and validated.
-    send(values);
-  }
-
   return (
     <Card className="mx-auto max-w-md">
       <CardHeader>
-        <CardTitle className="text-md pt-1 font-semibold text-alt">Contact Us</CardTitle>
+        <CardTitle className="text-md pt-1 font-semibold text-alt">
+          Contact Us
+        </CardTitle>
         <CardDescription className="pt-1 text-footerBG">
-          Fill out the form below and we&#39;ll get back to you as soon as possible.
+          Fill out the form below and we&#39;ll get back to you as soon as
+          possible.
         </CardDescription>
       </CardHeader>
       <CardContent>
         <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+          <form onSubmit={handleSubmit} className="space-y-8">
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-2 pt-1 text-footerBG">
                 <FormField
@@ -64,7 +76,11 @@ export default function ContactForm() {
                     <FormItem>
                       <FormLabel className="text-alt">First Name</FormLabel>
                       <FormControl>
-                        <Input placeholder="Your first name" className=""{...field} />
+                        <Input
+                          placeholder="Your first name"
+                          className=""
+                          {...field}
+                        />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
