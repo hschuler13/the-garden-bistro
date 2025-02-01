@@ -10,7 +10,7 @@ export const experimental_ppr = true;
 
 export const metadata: Metadata = {
   title: "The Garden Bistro",
-  description: "mmm yummy yummy in my tummyyy",
+  description: "From our garden, to your plate",
 };
 
 export default function RootLayout({ 
@@ -19,9 +19,9 @@ children}: { children: React.ReactNode}) {
     <html>
       <body className="h-screen bg-[#003B36]">
       <SidebarProvider>
-        <AppSidebar />
+        <AppSidebar/>
         <div className="flex shrink-0 gap-2 bg-[#AAD922] min-h-screen px-4 ">
-        <div className="flex h-16 shrink-0 items-start gap-2 bg-[#AAD922] px-2 pt-4 ">
+        <div className="flex h-16 shrink-0 items-start gap-2 bg-[#AAD922]  pt-4 ">
           <SidebarTrigger className="-ml-1" />
         </div>
         </div>

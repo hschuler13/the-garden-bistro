@@ -83,7 +83,7 @@ export async function sendConfirmationEmail(email: string, name: string, date: D
     from: process.env.GMAIL_USER,
     to: email,
     subject: 'Reservation Confirmation',
-    text: `Hello ${name},\n\nYour reservation has been confirmed.\n\nDetails: Date: ${date}\nTime: ${time}\nNumber of Guests: ${guests} \n\nThank you!`,
+    text: `Hello ${name},\n\nYour reservation has been confirmed.\n\nDetails:\n\nDate: ${date}\nTime: ${time}\nNumber of Guests: ${guests} \n\nThank you!`,
   };
 
   try {

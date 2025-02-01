@@ -1,0 +1,52 @@
+/* General container styles */
+.about-container {
+    width: 80%;
+    margin: 0 auto;
+    font-family: 'Arial', sans-serif;
+    padding: 20px;
+}
+
+/* Image styles */
+.image-cafe,
+.image-outside {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+/* Heading styles */
+.heading {
+    font-size: 1.8em;
+    color: #AAD922;
+    margin-top: 30px;
+    text-align: center;
+}
+
+/* Paragraph content styles */
+.content {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #AAD922;
+    text-align: justify;
+    margin: 15px 0;
+}
+
+/* Closing section (last heading) style */
+.closing {
+    font-size: 2em;
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* Responsive image styles */
+@media (max-width: 768px) {
+    .image-cafe,
+    .image-outside {
+        width: 100%;
+    }
+}
+
+/* Additional styles */
+p {
+    margin-bottom: 20px;
+}

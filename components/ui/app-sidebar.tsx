@@ -47,12 +47,12 @@ const data = {
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
-    <Sidebar {...props}>
+    <Sidebar  {...props}>
       <SidebarHeader>
         <image>
         </image>
       </SidebarHeader>
-      <SidebarContent>
+      <SidebarContent >
         {/* We create a SidebarGroup for each parent. */}
         {data.navMain.map((item) => (
           <SidebarGroup key={item.title}>

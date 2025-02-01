@@ -41,7 +41,7 @@ export default function Page() {
             <div className="max-w-6xl mx-auto p-6">
                 <div className="flex flex-col lg:flex-row gap-6">
                     {/* Professional Review */}
-                    <div className="flex-1 bg-white rounded-lg shadow-md p-6">
+                    <div className="flex-1 bg-footerBG rounded-lg shadow-md p-6">
                         <div className="space-y-4">
                             <div className="border-b pb-4">
                                 <p className="text-black font-semibold">By Felipe Fronchetti</p>
@@ -83,7 +83,7 @@ export default function Page() {
                     {/* Customer Reviews */}
                     <div className="flex-1 space-y-6">
                         {/* First Customer Review */}
-                        <div className="bg-white rounded-lg shadow-md p-6">
+                        <div className="bg-footerBG rounded-lg shadow-md p-6">
                             <p className="text-gray-800 mb-4">
                                 "The Garden Bistro has lovely outdoor setting and great environment. The Lemon Poppy
                                 Seed Cake with
@@ -96,7 +96,7 @@ export default function Page() {
                         </div>
 
                         {/* Second Customer Review */}
-                        <div className="bg-white rounded-lg shadow-md p-6">
+                        <div className="bg-footerBG rounded-lg shadow-md p-6">
                             <p className="text-gray-800 mb-4">
                                 "The Garden Bistro is a peaceful family-owned bistro with a beautiful garden vibe. The
                                 Pan-Seared Salmon

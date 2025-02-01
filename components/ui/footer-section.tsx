@@ -24,9 +24,9 @@ export default function FooterSection() {
               Phone: (555) 987-6543
             </p>
             <div className="grid grid-cols-3">
-              <a href="https://www.instagram.com/feliciathegoat/"><img src="/instagram_TGB.svg" alt="instagram" height={25} width={25}/></a>
-              <a href="https://www.facebook.com/TylerTheCreator/"><img src="/facebook_TGB.svg" alt="facebook" height={25} width={25}/></a>
-              <a href="https://x.com/tylerthecreator?lang=en"><img src="/twitter_TGB.svg" alt="twitter" height={25} width={25}/></a>
+              <a href="/"><img src="/instagram_TGB.svg" alt="instagram" height={25} width={25}/></a>
+              <a href="/"><img src="/facebook_TGB.svg" alt="facebook" height={25} width={25}/></a>
+              <a href="/"><img src="/twitter_TGB.svg" alt="twitter" height={25} width={25}/></a>
             </div>
             <div></div>
           </FooterColumn>
