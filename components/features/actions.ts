@@ -4,7 +4,7 @@ import client from "@/lib/mongodb";
 import nodemailer from 'nodemailer';
 
 export async function testDatabaseConnection() {
-  let isConnected = false;
+  const isConnected = false;
   try {
     const mongoClient = await client.connect();
     // Send a ping to confirm a successful connection
